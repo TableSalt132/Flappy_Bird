@@ -33,6 +33,7 @@ function updateBird() {
 }
 
 function flap() {
+  console.log("Flap!"):
   bird.velocity = bird.lift;
 }
 
@@ -106,5 +107,7 @@ function loop() {
 }
 
 document.addEventListener("keydown", flap);
+document.addEventListener("touchstart", flap);  // For mobile
+document.addEventListener("mousedown", flap);   // For desktop click
 loop();
     
